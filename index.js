@@ -6,10 +6,10 @@ const changeProposal = (arr) => {
       let transformedWord = '';
 
       for (let i = 0; i < word.length; i++) {
-          if (divisibility === 'чётный' && i % 2 === 0) {
-              transformedWord += word[i+1].toUpperCase();
-          } else if (divisibility === 'нечётный' && i % 2 !== 0) {
-              transformedWord += word[i-1].toUpperCase();
+          if (divisibility === 'чётный' && i % 2 !== 0) {
+              transformedWord += word[i].toUpperCase();
+          } else if (divisibility === 'нечётный' && i % 2 == 0) {
+              transformedWord += word[i].toUpperCase();
           } else {
               transformedWord += word[i];
           }
